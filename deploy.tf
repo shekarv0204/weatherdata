@@ -5,7 +5,7 @@ provider "aws" {
 data "archive_file" "lambda_code" {
   type        = "zip"
   source_dir  = "weatherdata/script"
-  output_path = "path/to/your/python/script.zip"
+  output_path = "weatherdata/script.zip"
 }
 resource "aws_s3_bucket" "lambda_code_bucket" {
   bucket = "your-lambda-code-bucket-name"
